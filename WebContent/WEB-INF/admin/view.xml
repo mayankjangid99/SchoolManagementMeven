@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE tiles-definitions PUBLIC
+"-//Apache Software Foundation//DTD Tiles Configuration 3.0//EN"
+"http://tiles.apache.org/dtds/tiles-config_3_0.dtd">
+
+<tiles-definitions>
+	
+<!-- 	################################# Attendence Details ################################# -->
+	<definition name="admin/searchMarkAttendance" extends="DefaultTemplate">
+		<put-attribute name="title" value="Search Attendence Details"></put-attribute>
+	    <put-attribute name="body" value="/WEB-INF/admin/searchMarkAttendance.jsp" />
+	</definition>
+	<definition name="admin/addMarkAttendance" extends="DefaultTemplate">
+		<put-attribute name="title" value="Add Mark Attendence Details"></put-attribute>
+	    <put-attribute name="body" value="/WEB-INF/admin/addMarkAttendance.jsp" />
+	</definition>
+	<definition name="admin/editMarkAttendance" extends="DefaultTemplate">
+		<put-attribute name="title" value="Edit Mark Attendence Details"></put-attribute>
+	    <put-attribute name="body" value="/WEB-INF/admin/editMarkAttendance.jsp" />
+	</definition>
+	<definition name="admin/resultMarkAttendance" extends="DefaultTemplate">
+		<put-attribute name="title" value="Attendence Details"></put-attribute>
+	    <put-attribute name="body" value="/WEB-INF/admin/resultMarkAttendance.jsp" />
+	</definition>
+	<definition name="admin/searchAttendanceDetails" extends="DefaultTemplate">
+		<put-attribute name="title" value="Search Attendence Details"></put-attribute>
+	    <put-attribute name="body" value="/WEB-INF/admin/searchAttendanceDetails.jsp" />
+	</definition>
+	<definition name="admin/resultAttendanceDetails" extends="DefaultTemplate">
+		<put-attribute name="title" value="Attendence Details"></put-attribute>
+	    <put-attribute name="body" value="/WEB-INF/admin/resultAttendanceDetails.jsp" />
+	</definition>
+<!-- 	########################################### Student Attendance ########################################## -->
+	<definition name="admin/searchStudentAttendanceDetails" extends="DefaultTemplate">
+		<put-attribute name="title" value="Search Student Attendence Details"></put-attribute>
+	    <put-attribute name="body" value="/WEB-INF/admin/searchStudentAttendanceDetails.jsp" />
+	</definition>
+	<definition name="admin/resultStudentAttendanceDetails" extends="DefaultTemplate">
+		<put-attribute name="title" value="Student Attendence Details"></put-attribute>
+	    <put-attribute name="body" value="/WEB-INF/admin/resultStudentAttendanceDetails.jsp" />
+	</definition>
+	
+<!-- 	############################### User ########################## -->
+	<definition name="admin/searchUser" extends="DefaultTemplate">
+		<put-attribute name="title" value="Search User Details"></put-attribute>
+	    <put-attribute name="body" value="/WEB-INF/admin/searchUser.jsp" />
+	</definition>	
+	<definition name="admin/resultUser" extends="DefaultTemplate">
+		<put-attribute name="title" value="User Details"></put-attribute>
+	    <put-attribute name="body" value="/WEB-INF/admin/resultUser.jsp" />
+	</definition>
+	<definition name="admin/addUser" extends="DefaultTemplate">
+		<put-attribute name="title" value="Add User"></put-attribute>
+	    <put-attribute name="body" value="/WEB-INF/admin/addUser.jsp" />
+	</definition>
+	<definition name="admin/editUser" extends="DefaultTemplate">
+		<put-attribute name="title" value="Edit User"></put-attribute>
+	    <put-attribute name="body" value="/WEB-INF/admin/editUser.jsp" />
+	</definition>
+	
+<!-- 	############################### Database ########################## -->
+	<definition name="admin/searchDatabase" extends="DefaultTemplate">
+		<put-attribute name="title" value="Search Database Details"></put-attribute>
+	    <put-attribute name="body" value="/WEB-INF/admin/searchDatabase.jsp" />
+	</definition>	
+	<definition name="admin/resultDatabase" extends="DefaultTemplate">
+		<put-attribute name="title" value="Database Details"></put-attribute>
+	    <put-attribute name="body" value="/WEB-INF/admin/resultDatabase.jsp" />
+	</definition>
+	<definition name="admin/addDatabase" extends="DefaultTemplate">
+		<put-attribute name="title" value="Add Database"></put-attribute>
+	    <put-attribute name="body" value="/WEB-INF/admin/addDatabase.jsp" />
+	</definition>
+	<definition name="admin/editDatabase" extends="DefaultTemplate">
+		<put-attribute name="title" value="Edit Database"></put-attribute>
+	    <put-attribute name="body" value="/WEB-INF/admin/editDatabase.jsp" />
+	</definition>
+
+<!-- 	############################### User ########################## -->
+	<definition name="admin/searchUniqueId" extends="DefaultTemplate">
+		<put-attribute name="title" value="Search Unique Id"></put-attribute>
+	    <put-attribute name="body" value="/WEB-INF/admin/searchUniqueId.jsp" />
+	</definition>	
+	<definition name="admin/resultUniqueId" extends="DefaultTemplate">
+		<put-attribute name="title" value="Unique Id Details"></put-attribute>
+	    <put-attribute name="body" value="/WEB-INF/admin/resultUniqueId.jsp" />
+	</definition>
+	<definition name="admin/addUniqueId" extends="DefaultTemplate">
+		<put-attribute name="title" value="Add Unique Id"></put-attribute>
+	    <put-attribute name="body" value="/WEB-INF/admin/addUniqueId.jsp" />
+	</definition>
+	<definition name="admin/editUniqueId" extends="DefaultTemplate">
+		<put-attribute name="title" value="Edit Unique Id"></put-attribute>
+	    <put-attribute name="body" value="/WEB-INF/admin/editUniqueId.jsp" />
+	</definition>
+
+<!-- 	############################### Salary Config ########################## -->
+	<definition name="admin/searchSalaryConfig" extends="DefaultTemplate">
+		<put-attribute name="title" value="Search Salary Config"></put-attribute>
+	    <put-attribute name="body" value="/WEB-INF/admin/searchSalaryConfig.jsp" />
+	</definition>
+	<definition name="admin/resultSalaryConfig" extends="DefaultTemplate">
+		<put-attribute name="title" value="Result Salary Config"></put-attribute>
+	    <put-attribute name="body" value="/WEB-INF/admin/resultSalaryConfig.jsp" />
+	</definition>
+	<definition name="admin/addSalaryConfig" extends="DefaultTemplate">
+		<put-attribute name="title" value="Add Salary Config Details"></put-attribute>
+	    <put-attribute name="body" value="/WEB-INF/admin/addSalaryConfig.jsp" />
+	</definition>
+	<definition name="admin/editSalaryConfig" extends="DefaultTemplate">
+		<put-attribute name="title" value="Result Salary Config"></put-attribute>
+	    <put-attribute name="body" value="/WEB-INF/admin/editSalaryConfig.jsp" />
+	</definition>			
+	
+</tiles-definitions>

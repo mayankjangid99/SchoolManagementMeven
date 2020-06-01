@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE tiles-definitions PUBLIC
+"-//Apache Software Foundation//DTD Tiles Configuration 3.0//EN"
+"http://tiles.apache.org/dtds/tiles-config_3_0.dtd">
+
+<tiles-definitions>
+<!-- 	########################################### Exception Handler ########################################## -->
+	<definition name="error" extends="DefaultTemplate">
+		<put-attribute name="title" value="Error in Application"></put-attribute>
+	    <put-attribute name="body" value="/WEB-INF/error.jsp" />
+	</definition>
+	<definition name="outside/error" extends="DefaultTemplate">
+		<put-attribute name="header" value="" />
+		<put-attribute name="menu" value="" />
+		<put-attribute name="title" value="Error in Application" />
+	    <put-attribute name="body" value="/WEB-INF/error.jsp" />
+	    <put-attribute name="footer" value="" />
+		<put-attribute name="rightMenu" value="" />
+	</definition>
+	
+
+<!-- 	########################################### Welcome ########################################## -->
+	<definition name="user/welcome" extends="DefaultTemplate">
+		<put-attribute name="title" value="Welcome"></put-attribute>
+	    <put-attribute name="body" value="/WEB-INF/user/welcome.jsp" />
+	</definition>
+		
+	
+<!-- 	########################################### Student Attendance ########################################## -->
+	<definition name="user/searchStudentAttendanceDetails" extends="DefaultTemplate">
+		<put-attribute name="title" value="Search Student Attendence Details"></put-attribute>
+	    <put-attribute name="body" value="/WEB-INF/user/searchStudentAttendanceDetails.jsp" />
+	</definition>
+	<definition name="user/resultStudentAttendanceDetails" extends="DefaultTemplate">
+		<put-attribute name="title" value="Result Student Attendence Details"></put-attribute>
+	    <put-attribute name="body" value="/WEB-INF/user/resultStudentAttendanceDetails.jsp" />
+	</definition>
+	
+	<!-- 	########################################### Student Fee ########################################## -->
+	<!-- <definition name="staff/searchStudentFeeDetails" extends="DefaultTemplate">
+		<put-attribute name="title" value="Search Student Fee Details" />
+	    <put-attribute name="body" value="/WEB-INF/staff/searchStudentFeeDetails.jsp" />
+	</definition> -->
+	<definition name="user/resultStudentFeeDetails" extends="DefaultTemplate">
+		<put-attribute name="title" value="Result Student Fee Details" />
+	    <put-attribute name="body" value="/WEB-INF/user/resultStudentFeeDetails.jsp" />
+	</definition>
+	<!-- <definition name="staff/resultClassFeeDetails" extends="DefaultTemplate">
+		<put-attribute name="title" value="Result Class Fee Details" />
+	    <put-attribute name="body" value="/WEB-INF/staff/resultClassFeeDetails.jsp" />
+	</definition> -->
+	<definition name="user/getStudentFeeTransactionHistoryModal" extends="DefaultTemplate">
+		<put-attribute name="title" value=""/>
+		<put-attribute name="header" value=""/>
+		<put-attribute name="menu" value=""/>
+	    <put-attribute name="body" value="/WEB-INF/user/getStudentFeeTransactionHistoryModal.jsp" />
+		<put-attribute name="footer" value=""/>
+		<put-attribute name="rightMenu" value=""/>
+		<put-attribute name="scriptjs" value=""/>
+	</definition>
+	
+<!-- 	########################################### Change Password ########################################## -->
+	<definition name="outside/changePassword" extends="DefaultTemplate">
+		<put-attribute name="header" value="" />
+		<put-attribute name="menu" value="" />
+		<put-attribute name="title" value="Change Password" />
+	    <put-attribute name="body" value="/WEB-INF/user/changePassword.jsp" />
+	    <put-attribute name="footer" value="" />
+		<put-attribute name="rightMenu" value="" />
+	</definition>
+	
+	<definition name="user/changePassword" extends="DefaultTemplate">
+		<put-attribute name="title" value="Change Password" />
+	    <put-attribute name="body" value="/WEB-INF/user/changePassword.jsp" />
+	</definition>
+	
+<!-- 	########################################### Dashboard ########################################## -->	
+	<definition name="user/resultDashboard" extends="DefaultTemplate">
+<!-- 		<put-attribute name="header" value="" /> -->
+<!-- 		<put-attribute name="menu" value="" /> -->
+		<put-attribute name="title" value="Dashboard" />
+	    <put-attribute name="body" value="/WEB-INF/user/resultDashboard.jsp" />
+<!-- 	    <put-attribute name="footer" value="" /> -->
+	    <put-attribute name="scriptjs" value="" />
+<!-- 		<put-attribute name="rightMenu" value="" /> -->
+	</definition>
+
+
+<!-- 	############################### Redirect Page ########################## -->	
+	<definition name="user/redirectPage" extends="DefaultTemplate">
+		<put-attribute name="title" value="Redirect"></put-attribute>
+	    <put-attribute name="body" value="/WEB-INF/user/redirectPage.jsp" />
+	</definition>	
+	
+<!-- 	############################### Transport ########################## -->	
+	<definition name="user/searchTransport" extends="DefaultTemplate">
+		<put-attribute name="title" value="Search Transport"></put-attribute>
+	    <put-attribute name="body" value="/WEB-INF/user/searchTransport.jsp" />
+	</definition>	
+	<definition name="user/resultTransport" extends="DefaultTemplate">
+		<put-attribute name="title" value="Result Transport"></put-attribute>
+	    <put-attribute name="body" value="/WEB-INF/user/resultTransport.jsp" />
+	</definition>
+	
+	<!-- 	############################### Transport ########################## -->
+	<definition name="user/selectClassSectionModal" extends="DefaultTemplate">
+		<put-attribute name="title" value=""/>
+		<put-attribute name="header" value=""/>
+		<put-attribute name="menu" value=""/>
+	    <put-attribute name="body" value="/WEB-INF/user/selectClassSectionModal.jsp" />
+		<put-attribute name="footer" value=""/>
+		<put-attribute name="rightMenu" value=""/>
+		<put-attribute name="scriptjs" value=""/>
+	</definition>
+	
+	
+	
+</tiles-definitions>

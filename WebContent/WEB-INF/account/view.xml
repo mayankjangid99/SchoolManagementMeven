@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE tiles-definitions PUBLIC
+"-//Apache Software Foundation//DTD Tiles Configuration 3.0//EN"
+"http://tiles.apache.org/dtds/tiles-config_3_0.dtd">
+
+<tiles-definitions>
+	
+	<!-- 	########################################### Salary Structure ########################################## -->
+	<definition name="account/searchSalaryStructure" extends="DefaultTemplate">
+		<put-attribute name="title" value="Search Salary Structure"></put-attribute>
+	    <put-attribute name="body" value="/WEB-INF/account/searchSalaryStructure.jsp" />
+	</definition>
+	<definition name="account/resultSalaryStructure" extends="DefaultTemplate">
+		<put-attribute name="title" value="Result Salary Structure"></put-attribute>
+	    <put-attribute name="body" value="/WEB-INF/account/resultSalaryStructure.jsp" />
+	</definition>
+	<definition name="account/addSalaryStructure" extends="DefaultTemplate">
+		<put-attribute name="title" value="Add Salary Structure"></put-attribute>
+	    <put-attribute name="body" value="/WEB-INF/account/addSalaryStructure.jsp" />
+	</definition>
+	<definition name="account/editSalaryStructure" extends="DefaultTemplate">
+		<put-attribute name="title" value="Edit Salary Structure"></put-attribute>
+	    <put-attribute name="body" value="/WEB-INF/account/editSalaryStructure.jsp" />
+	</definition>
+	
+</tiles-definitions>

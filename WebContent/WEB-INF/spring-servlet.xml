@@ -1,0 +1,284 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+    xmlns:p="http://www.springframework.org/schema/p"
+    xmlns:context="http://www.springframework.org/schema/context"
+    xmlns:tx="http://www.springframework.org/schema/tx"
+    xmlns:mvc="http://www.springframework.org/schema/mvc"
+    xmlns:aop="http://www.springframework.org/schema/aop"
+    xsi:schemaLocation="http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans.xsd
+        http://www.springframework.org/schema/context
+        http://www.springframework.org/schema/context/spring-context.xsd
+        http://www.springframework.org/schema/mvc
+        http://www.springframework.org/schema/mvc/spring-mvc.xsd
+        http://www.springframework.org/schema/tx
+        http://www.springframework.org/schema/tx/spring-tx.xsd
+        http://www.springframework.org/schema/aop
+        http://www.springframework.org/schema/aop/spring-aop.xsd">
+        
+
+	
+	<context:component-scan base-package="com.school" />
+	
+	<context:property-placeholder location="classpath:jdbc.properties" />
+	
+<!-- 	it is use to Annotation Base Transactions -->
+	<tx:annotation-driven transaction-manager="hibernateTransactionManager" />
+	
+<!-- 	It is use to active Annotation Base Application -->
+	<mvc:annotation-driven />
+	
+<!-- 	It is use to active aop in Application -->
+	<aop:aspectj-autoproxy/>
+	
+<!-- 	########################################### Validation Property #################################### -->
+	<!-- <bean id="messageSource" class="org.springframework.context.support.ResourceBundleMessageSource">
+	   <property name="basename" value="messages" />
+	</bean> -->
+
+
+	<bean id="messageSource" class="org.springframework.context.support.ReloadableResourceBundleMessageSource">
+		<property name="basename" value="classpath:messages" />
+		<property name="defaultEncoding" value="UTF-8" />
+	</bean>
+
+	<mvc:interceptors>
+		<bean class="org.springframework.web.servlet.i18n.LocaleChangeInterceptor">
+			<property name="paramName" value="locale" />
+		</bean>
+	</mvc:interceptors>
+
+
+	<bean id="localeResolver"
+		class="org.springframework.web.servlet.i18n.SessionLocaleResolver">
+		<property name="defaultLocale" value="en" />
+	</bean>
+	
+	
+	
+<!-- 	################################### js/css static content ###################################### -->
+
+	<mvc:resources mapping="/**" location="/"/>
+	<mvc:resources mapping="/static/**" location="/static/"/>
+	<mvc:resources mapping="/static/bootstrap/**" location="/static/bootstrap/"/>
+	<mvc:resources mapping="/static/build/**" location="/static/build/"/>
+	<mvc:resources mapping="/static/dist/**" location="/static/dist/"/>
+	<mvc:resources mapping="/static/dist/css/**" location="/static/dist/css/"/>
+	<mvc:resources mapping="/static/dist/img/**" location="/static/dist/img/"/>
+	<mvc:resources mapping="/static/dist/js/**" location="/static/dist/js/"/>
+	<mvc:resources mapping="/static/link/**" location="/static/link/"/>
+	<mvc:resources mapping="/static/fonts/**" location="/static/fonts/"/>
+	<mvc:resources mapping="/static/plugins/**" location="/static/plugins/"/>
+	<mvc:resources mapping="/static/plugins/datepicker/**" location="/static/plugins/datepicker/"/>
+	<mvc:resources mapping="/static/js/**" location="/static/js/"/>
+	<mvc:resources mapping="/static/css/**" location="/static/css/"/>
+	<mvc:resources mapping="/static/img/**" location="/static/img/"/>
+	
+	<mvc:resources mapping="/static/grid/**" location="/static/grid/" />
+	<mvc:resources mapping="/static/grid/style/**" location="/static/grid/style/" />
+	
+	<mvc:resources mapping="/static/calendar/**" location="/static/calendar/" />
+	<mvc:resources mapping="/static/calendar/css/**" location="/static/calendar/css/" />
+	<mvc:resources mapping="/static/calendar/js/**" location="/static/calendar/js/" />
+	<mvc:resources mapping="/static/calendar/js/cupertino/**" location="/static/calendar/js/cupertino/" />
+	<mvc:resources mapping="/static/calendar/js/cupertino/images/**" location="/static/calendar/js/cupertino/images/" />
+	
+<!-- 	######################################## Driver Manager Data Source ################################### -->
+	<bean id="dataSource"
+		class="org.springframework.jdbc.datasource.DriverManagerDataSource">
+		<property name="driverClassName" value="${database.driver}" />
+		<property name="url" value="${database.url}" />
+		<property name="username" value="${database.user}" />
+		<property name="password" value="${database.password}" />
+	</bean>	
+	
+	
+<!-- 	########################################## Hibernate Mapping ############################################### -->
+	<bean id="sessionFactory"
+		class="org.springframework.orm.hibernate4.LocalSessionFactoryBean">
+		<property name="dataSource" ref="dataSource" />
+			<property name="annotatedClasses">
+			<list>
+				<value>com.school.common.model.AdmissionDetailsModel</value>
+				<value>com.school.common.model.AdmissionNumberModel</value>
+				<value>com.school.common.model.ApplicationSettingsModel</value>
+				<value>com.school.common.model.ClassInformationModel</value>
+				<value>com.school.common.model.ClassSectionModel</value>
+				<value>com.school.common.model.ClassFeeCategoryModel</value>
+				<value>com.school.common.model.ClassSubjectModel</value>
+				<value>com.school.common.model.FeeCategoryModel</value>
+				<value>com.school.common.model.GlobalConfigModel</value>
+				<value>com.school.common.model.ParentDetailsModel</value>
+				<value>com.school.common.model.PaymentCategoryModel</value>
+				<value>com.school.common.model.ReportCardConfigModel</value>
+				<value>com.school.common.model.SchoolPaymentCategoryModel</value>
+				<value>com.school.common.model.SchoolProfileModel</value>
+				<value>com.school.common.model.SchoolSessionModel</value>
+				<value>com.school.common.model.SectionInformationModel</value>
+				<value>com.school.common.model.SessionDetailsModel</value>
+				<value>com.school.common.model.StudentAdditionalFeeDetailsModel</value>
+				<value>com.school.common.model.StudentAttendanceDetailsModel</value>
+				<value>com.school.common.model.StudentAttendanceEmailDetailsModel</value>
+				<value>com.school.common.model.StudentAttendanceHistoryModel</value>
+				<value>com.school.common.model.StudentAttendanceHistoryId</value>
+				<value>com.school.common.model.StudentAttendanceSmsDetailsModel</value>
+				<value>com.school.common.model.StudentDetailsModel</value>
+				<value>com.school.common.model.StudentFeeDetailsModel</value>
+				<value>com.school.common.model.SubjectDetailsModel</value>
+				<value>com.school.common.model.TransportModel</value>
+				<value>com.school.common.model.UserAttendanceDetailsModel</value>
+				<value>com.school.common.model.UserCheckInModel</value>
+				<value>com.school.common.model.UserModel</value>
+				<value>com.school.common.model.UserDetailsModel</value>
+				<value>com.school.common.model.UserRoleModel</value>
+				<value>com.school.common.model.UserSettingModel</value>
+				<value>com.school.common.model.UniqueIdModel</value>
+				<value>com.school.common.model.UniqueIdPK</value>
+			</list>
+		</property>
+		<property name="packagesToScan">
+			<value>com.school.common.model</value>
+		</property>
+		<property name="hibernateProperties">
+			<props>
+				<prop key="hibernate.dialect">${hibernate.dialect}</prop>
+				<prop key="hibernate.show_sql">${hibernate.show_sql}</prop>
+				<prop key="hibernate.hbm2ddl.auto">${hibernate.hbm2ddl.auto}</prop>
+				
+<!-- 			######################### Start Hibernate Cache #######################	 -->
+				<prop key="hibernate.cache.use_query_cache">true</prop>
+				<prop key="hibernate.cache.use_second_level_cache">true</prop>
+				<prop key="net.sf.ehcache.configurationResourceName">/ehcache.xml</prop>	
+				<!-- <prop key="hibernate.cache.region.provider_class">net.sf.ehcache.hibernate.EhCacheProvider</prop> -->		<!-- not use so comment -->	
+				<!-- <prop key="hibernate.cache.provider_class">org.hibernate.cache.EhCacheProvider</prop> -->	<!-- If you use hibernate version below than 3.3 -->
+				<prop key="hibernate.cache.region.factory_class">org.hibernate.cache.ehcache.SingletonEhCacheRegionFactory</prop>	
+				
+				<!-- Disable Cache-->
+<!--			<prop key="hibernate.cache.use_query_cache">false</prop>
+				<prop key="hibernate.cache.use_second_level_cache">false</prop>
+				<prop key="hibernate.cache.provider_class">org.hibernate.cache.NoCacheProvider</prop> -->	 	<!-- Disable Cache -->
+<!-- 			######################### End Hibernate Cache #######################	 -->			
+			</props>
+		</property>
+		<!-- <property name="zeroDateTimeBehavior"><value>convertToNull</value></property> -->
+	</bean>
+	
+	<bean id="hibernateTransactionManager"
+		class="org.springframework.orm.hibernate4.HibernateTransactionManager">
+		<property name="sessionFactory" ref="sessionFactory" />
+	</bean>
+	
+	<bean id="encryptorConfiguration" class="org.jasypt.encryption.pbe.config.EnvironmentStringPBEConfig">
+	  <property name="algorithm" value="PBEWithMD5AndDES" />
+	  <property name="passwordSysPropertyName" value="beaver.encryption.password"/>
+	</bean>
+	 
+	<bean id="encryptor" class="org.jasypt.encryption.pbe.StandardPBEStringEncryptor">
+	  <property name="config" ref="encryptorConfiguration" />
+	</bean>
+	 
+	<bean id="hibernateStringEncryptor" class="org.jasypt.hibernate4.encryptor.HibernatePBEStringEncryptor">
+	  <property name="encryptor" ref="encryptor"/>
+	  <property name="registeredName" value="hibernateStringEncryptor"/>
+	</bean>
+<!-- 	########################################## Java Mailing ######################################################### -->
+	<bean id="mailSender" class="org.springframework.mail.javamail.JavaMailSenderImpl">
+		<property name="host" value="smtp.gmail.com" />
+		<property name="port" value="587" />
+		<property name="username" value="xxxxxxxxx@gmail.com" />
+		<property name="password" value="xxxxx" />
+		<property name="javaMailProperties">
+			<props>
+				<prop key="mail.transport.protocol">smtp</prop>
+				<prop key="mail.smtp.auth">true</prop>
+				<prop key="mail.smtp.starttls.enable">true</prop>
+				<prop key="mail.debug">true</prop>
+				<prop key="mail.smtp.socketFactory.class">javax.net.ssl.SSLSocketFactory</prop>
+				<prop key="mail.smtp.socketFactory.port">587</prop>
+			</props>
+		</property>
+	</bean>
+	
+	
+<!-- 	################################################ MultipartResolver ######################################## -->
+	<bean id="multipartResolver"
+        class="org.springframework.web.multipart.commons.CommonsMultipartResolver">
+        <!-- max upload size in bytes -->
+        <property name="maxUploadSize" value="20971520" /> <!-- 20MB -->
+        
+        <!-- max size of file in memory (in bytes) -->
+        <property name="maxInMemorySize" value="1048576" /> <!-- 1MB -->
+
+    </bean>
+	
+	
+	
+<!-- 	############################################### Exception Handling ############################################# -->
+	<bean
+		class="org.springframework.web.servlet.handler.SimpleMappingExceptionResolver">
+		<property name="exceptionMappings">
+			<props>
+				<prop key="java.lang.Exception">error</prop>
+			</props>
+		</property>
+	</bean>	
+	
+	
+	
+<!-- 	####################################### Internal Resource View Resolver ####################################### -->
+	<!-- <bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+		<property name="prefix" value="/WEB-INF/" />
+		<property name="suffix" value=".jsp" />
+	</bean> -->
+
+
+	<!-- Resolves views selected for rendering by @Controllers to .jsp resources in the /WEB-INF/views directory -->
+        <bean id="tilesConfigurer"
+        class="org.springframework.web.servlet.view.tiles3.TilesConfigurer">
+        <property name="definitions">
+            <list>
+                <value>/WEB-INF/tiles.xml</value>
+                <value>/WEB-INF/**/view.xml</value>
+<!--                 <value>/WEB-INF/views/**/views.xml</value> -->
+            </list>
+        </property>
+    </bean>
+    <bean id="tilesViewResolver"
+        class="org.springframework.web.servlet.view.UrlBasedViewResolver">
+        <property name="viewClass">
+            <value>
+                org.springframework.web.servlet.view.tiles3.TilesView
+            </value>
+        </property>
+        <property name="order" value="0"/>
+    </bean>
+		
+		
+		
+		
+		
+		
+<!-- 	#################################### AOP based runtime exception Interceptor ################################# -->
+	<!-- This bean can be activated for AOP based runtime exception Interceptor.
+         'exceptionInterceptor' will be called on each method of '*Controller' classes. -->
+    <bean name="exceptionInterceptor" class="com.school.interceptor.MyProjectExceptionHandler"/>
+    
+    <bean class="org.springframework.aop.framework.autoproxy.BeanNameAutoProxyCreator">
+        <property name="beanNames">
+            <value>*Controller</value>
+        </property>
+        <property name="interceptorNames">
+            <list>
+                <value>exceptionInterceptor</value>
+            </list>
+        </property>
+    </bean>
+    
+    
+		
+		
+		
+		
+		
+</beans>

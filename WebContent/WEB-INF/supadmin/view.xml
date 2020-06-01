@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE tiles-definitions PUBLIC
+"-//Apache Software Foundation//DTD Tiles Configuration 3.0//EN"
+"http://tiles.apache.org/dtds/tiles-config_3_0.dtd">
+
+<tiles-definitions>
+<!-- 	############################### Sup Admin Details ########################## -->
+	<definition name="supadmin/addSupAdminDetails" extends="DefaultTemplate">
+		<put-attribute name="title" value="Add Super Admin Details"></put-attribute>
+		<put-attribute name="header" value="" />
+		<put-attribute name="menu" value="" />
+	    <put-attribute name="body" value="/WEB-INF/supadmin/addSupAdminDetails.jsp" />
+		<put-attribute name="footer" value="" />
+		<put-attribute name="rightMenu" value="" />
+	</definition>
+<!-- 	############################### Global Config ########################## -->
+	<definition name="supadmin/searchGlobalConfig" extends="DefaultTemplate">
+		<put-attribute name="title" value="Search Global Config"></put-attribute>
+	    <put-attribute name="body" value="/WEB-INF/supadmin/searchGlobalConfig.jsp" />
+	</definition>
+	<definition name="supadmin/resultGlobalConfig" extends="DefaultTemplate">
+		<put-attribute name="title" value="Result Global Config"></put-attribute>
+	    <put-attribute name="body" value="/WEB-INF/supadmin/resultGlobalConfig.jsp" />
+	</definition>
+	<definition name="supadmin/addGlobalConfig" extends="DefaultTemplate">
+		<put-attribute name="title" value="Add Global Config"></put-attribute>
+	    <put-attribute name="body" value="/WEB-INF/supadmin/addGlobalConfig.jsp" />
+	</definition>
+	<definition name="supadmin/editGlobalConfig" extends="DefaultTemplate">
+		<put-attribute name="title" value="Result Global Config"></put-attribute>
+	    <put-attribute name="body" value="/WEB-INF/supadmin/editGlobalConfig.jsp" />
+	</definition>
+<!-- 	############################### Class Section ########################## -->
+	<definition name="supadmin/searchClassSection" extends="DefaultTemplate">
+		<put-attribute name="title" value="Search Class Section"></put-attribute>
+	    <put-attribute name="body" value="/WEB-INF/supadmin/searchClassSection.jsp" />
+	</definition>
+	<definition name="supadmin/resultClassSection" extends="DefaultTemplate">
+		<put-attribute name="title" value="Result Class Section"></put-attribute>
+	    <put-attribute name="body" value="/WEB-INF/supadmin/resultClassSection.jsp" />
+	</definition>
+	<definition name="supadmin/addClassSection" extends="DefaultTemplate">
+		<put-attribute name="title" value="Add Class Section"></put-attribute>
+	    <put-attribute name="body" value="/WEB-INF/supadmin/addClassSection.jsp" />
+	</definition>
+	<definition name="supadmin/editClassSection" extends="DefaultTemplate">
+		<put-attribute name="title" value="Edit Class Section"></put-attribute>
+	    <put-attribute name="body" value="/WEB-INF/supadmin/editClassSection.jsp" />
+	</definition>
+	
+	
+<!-- 	############################### Fee Category with Class ########################## -->
+	<definition name="supadmin/searchFeeCategory" extends="DefaultTemplate">
+		<put-attribute name="title" value="Search Fee Category"></put-attribute>
+	    <put-attribute name="body" value="/WEB-INF/supadmin/searchFeeCategory.jsp" />
+	</definition>
+	<definition name="supadmin/resultFeeCategory" extends="DefaultTemplate">
+		<put-attribute name="title" value="Result Fee Category"></put-attribute>
+	    <put-attribute name="body" value="/WEB-INF/supadmin/resultFeeCategory.jsp" />
+	</definition>
+	<definition name="supadmin/addFeeCategory" extends="DefaultTemplate">
+		<put-attribute name="title" value="Add Fee Category"></put-attribute>
+	    <put-attribute name="body" value="/WEB-INF/supadmin/addFeeCategory.jsp" />
+	</definition>
+	<definition name="supadmin/editFeeCategory" extends="DefaultTemplate">
+		<put-attribute name="title" value="Edit Fee Category"></put-attribute>
+	    <put-attribute name="body" value="/WEB-INF/supadmin/editFeeCategory.jsp" />
+	</definition>
+	
+	
+	
+<!-- 	############################### Subject with Class ########################## -->
+	<definition name="supadmin/searchClassSubject" extends="DefaultTemplate">
+		<put-attribute name="title" value="Search Class Subject"></put-attribute>
+	    <put-attribute name="body" value="/WEB-INF/supadmin/searchClassSubject.jsp" />
+	</definition>
+	<definition name="supadmin/resultClassSubject" extends="DefaultTemplate">
+		<put-attribute name="title" value="Result Class Subject"></put-attribute>
+	    <put-attribute name="body" value="/WEB-INF/supadmin/resultClassSubject.jsp" />
+	</definition>
+	<definition name="supadmin/addClassSubject" extends="DefaultTemplate">
+		<put-attribute name="title" value="Add Class Subject"></put-attribute>
+	    <put-attribute name="body" value="/WEB-INF/supadmin/addClassSubject.jsp" />
+	</definition>
+	<definition name="supadmin/editClassSubject" extends="DefaultTemplate">
+		<put-attribute name="title" value="Edit Class Subject"></put-attribute>
+	    <put-attribute name="body" value="/WEB-INF/supadmin/editClassSubject.jsp" />
+	</definition>
+	
+	
+<!-- 	############################### Server Logs ########################## -->
+	<definition name="supadmin/resultServerLog" extends="DefaultTemplate">
+		<put-attribute name="title" value="Result Server Log"></put-attribute>
+	    <put-attribute name="body" value="/WEB-INF/supadmin/resultServerLog.jsp" />
+	</definition>
+	<definition name="supadmin/resultServerHistoryLogs" extends="DefaultTemplate">
+		<put-attribute name="title" value="Result Server History Logs"></put-attribute>
+	    <put-attribute name="body" value="/WEB-INF/supadmin/resultServerHistoryLogs.jsp" />
+	</definition>
+
+<!-- 	############################### School Profile ########################## -->
+	<definition name="supadmin/searchSchoolProfile" extends="DefaultTemplate">
+		<put-attribute name="title" value="Search School Profile"></put-attribute>
+	    <put-attribute name="body" value="/WEB-INF/supadmin/searchSchoolProfile.jsp" />
+	</definition>
+	<definition name="supadmin/resultSchoolProfile" extends="DefaultTemplate">
+		<put-attribute name="title" value="Result School Profile"></put-attribute>
+	    <put-attribute name="body" value="/WEB-INF/supadmin/resultSchoolProfile.jsp" />
+	</definition>
+	<definition name="supadmin/addSchoolProfile" extends="DefaultTemplate">
+		<put-attribute name="title" value="Add School Profile"></put-attribute>
+	    <put-attribute name="body" value="/WEB-INF/supadmin/addSchoolProfile.jsp" />
+	</definition>
+	<definition name="supadmin/editSchoolProfile" extends="DefaultTemplate">
+		<put-attribute name="title" value="Edit School Profile"></put-attribute>
+	    <put-attribute name="body" value="/WEB-INF/supadmin/editSchoolProfile.jsp" />
+	</definition>
+
+<!-- 	############################### School Session ########################## -->
+	<definition name="supadmin/searchSchoolSession" extends="DefaultTemplate">
+		<put-attribute name="title" value="Search School Session"></put-attribute>
+	    <put-attribute name="body" value="/WEB-INF/supadmin/searchSchoolSession.jsp" />
+	</definition>
+	<definition name="supadmin/resultSchoolSession" extends="DefaultTemplate">
+		<put-attribute name="title" value="Result School Session"></put-attribute>
+	    <put-attribute name="body" value="/WEB-INF/supadmin/resultSchoolSession.jsp" />
+	</definition>
+	<definition name="supadmin/addSchoolSession" extends="DefaultTemplate">
+		<put-attribute name="title" value="Add School Session"></put-attribute>
+	    <put-attribute name="body" value="/WEB-INF/supadmin/addSchoolSession.jsp" />
+	</definition>
+	<definition name="supadmin/editSchoolSession" extends="DefaultTemplate">
+		<put-attribute name="title" value="Edit School Session"></put-attribute>
+	    <put-attribute name="body" value="/WEB-INF/supadmin/editSchoolSession.jsp" />
+	</definition>
+	
+<!-- 	############################### Payment Category ########################## -->
+	<definition name="supadmin/searchPaymentCategory" extends="DefaultTemplate">
+		<put-attribute name="title" value="Search Payment Category"></put-attribute>
+	    <put-attribute name="body" value="/WEB-INF/supadmin/searchPaymentCategory.jsp" />
+	</definition>
+	<definition name="supadmin/resultPaymentCategory" extends="DefaultTemplate">
+		<put-attribute name="title" value="Result Payment Category"></put-attribute>
+	    <put-attribute name="body" value="/WEB-INF/supadmin/resultPaymentCategory.jsp" />
+	</definition>
+	<definition name="supadmin/addPaymentCategory" extends="DefaultTemplate">
+		<put-attribute name="title" value="Add Payment Category"></put-attribute>
+	    <put-attribute name="body" value="/WEB-INF/supadmin/addPaymentCategory.jsp" />
+	</definition>
+	<definition name="supadmin/editPaymentCategory" extends="DefaultTemplate">
+		<put-attribute name="title" value="Edit Payment Category"></put-attribute>
+	    <put-attribute name="body" value="/WEB-INF/supadmin/editPaymentCategory.jsp" />
+	</definition>
+	
+	
+<!-- 	############################### Application Settings ########################## -->
+	<definition name="supadmin/addApplicationSettings" extends="DefaultTemplate">
+		<put-attribute name="title" value="Add Application Settings"></put-attribute>
+	    <put-attribute name="body" value="/WEB-INF/supadmin/addApplicationSettings.jsp" />
+	</definition>
+	
+<!-- 	############################### Report Card Config ########################## -->
+	<definition name="supadmin/searchReportCardConfig" extends="DefaultTemplate">
+		<put-attribute name="title" value="Search Report Card Config"></put-attribute>
+	    <put-attribute name="body" value="/WEB-INF/supadmin/searchReportCardConfig.jsp" />
+	</definition>
+	<definition name="supadmin/resultReportCardConfig" extends="DefaultTemplate">
+		<put-attribute name="title" value="Result Report Card Config"></put-attribute>
+	    <put-attribute name="body" value="/WEB-INF/supadmin/resultReportCardConfig.jsp" />
+	</definition>
+	<definition name="supadmin/addReportCardConfig" extends="DefaultTemplate">
+		<put-attribute name="title" value="Add Report Card Config Details"></put-attribute>
+	    <put-attribute name="body" value="/WEB-INF/supadmin/addReportCardConfig.jsp" />
+	</definition>
+	<definition name="supadmin/editReportCardConfig" extends="DefaultTemplate">
+		<put-attribute name="title" value="Result Report Card Config"></put-attribute>
+	    <put-attribute name="body" value="/WEB-INF/supadmin/editReportCardConfig.jsp" />
+	</definition>
+	
+<!-- 	############################### Micro Service Config ########################## -->
+	<definition name="supadmin/searchMicroServiceConfig" extends="DefaultTemplate">
+		<put-attribute name="title" value="Search Micro Service Config"></put-attribute>
+	    <put-attribute name="body" value="/WEB-INF/supadmin/searchMicroServiceConfig.jsp" />
+	</definition>
+	<definition name="supadmin/resultMicroServiceConfig" extends="DefaultTemplate">
+		<put-attribute name="title" value="Result Micro Service Config"></put-attribute>
+	    <put-attribute name="body" value="/WEB-INF/supadmin/resultMicroServiceConfig.jsp" />
+	</definition>
+	<definition name="supadmin/addMicroServiceConfig" extends="DefaultTemplate">
+		<put-attribute name="title" value="Add Micro Service Config"></put-attribute>
+	    <put-attribute name="body" value="/WEB-INF/supadmin/addMicroServiceConfig.jsp" />
+	</definition>
+	<definition name="supadmin/editMicroServiceConfig" extends="DefaultTemplate">
+		<put-attribute name="title" value="Result Micro Service Config"></put-attribute>
+	    <put-attribute name="body" value="/WEB-INF/supadmin/editMicroServiceConfig.jsp" />
+	</definition>
+	
+	
+</tiles-definitions>

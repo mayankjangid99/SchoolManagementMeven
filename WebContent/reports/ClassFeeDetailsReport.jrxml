@@ -1,0 +1,229 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="ClassFeeReport" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20">
+	<property name="ireport.zoom" value="1.5"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<parameter name="REAL_PATH" class="java.lang.String"/>
+	<parameter name="SUBREPORT_DIR" class="java.lang.String" isForPrompting="false">
+		<defaultValueExpression><![CDATA["D:\\MyWork\\SchoolManagement\\WebContent\\reports\\"]]></defaultValueExpression>
+	</parameter>
+	<parameter name="MONTH_NAME" class="java.lang.String"/>
+	<field name="fullName" class="java.lang.String"/>
+	<field name="fatherName" class="java.lang.String"/>
+	<field name="motherName" class="java.lang.String"/>
+	<field name="admissionNo" class="java.lang.String"/>
+	<field name="rollNo" class="java.lang.String"/>
+	<field name="schoolName" class="java.lang.String"/>
+	<field name="schoolLogo" class="java.lang.String"/>
+	<field name="schoolAddress" class="java.lang.String"/>
+	<field name="feeStatus" class="java.lang.String"/>
+	<field name="subReportDataList" class="java.util.List"/>
+	<field name="className" class="java.lang.String"/>
+	<field name="sectionName" class="java.lang.String"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="79" splitType="Stretch">
+			<textField>
+				<reportElement x="79" y="10" width="330" height="18"/>
+				<textElement markup="none">
+					<font size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{schoolName}]]></textFieldExpression>
+			</textField>
+			<image>
+				<reportElement x="8" y="10" width="65" height="56"/>
+				<imageExpression><![CDATA[$P{REAL_PATH}+$F{schoolLogo}]]></imageExpression>
+			</image>
+			<textField>
+				<reportElement x="79" y="28" width="330" height="31"/>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{schoolAddress}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="455" y="10" width="100" height="14"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{className}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="413" y="10" width="40" height="14"/>
+				<textElement textAlignment="Right"/>
+				<text><![CDATA[Class : ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="413" y="24" width="40" height="14"/>
+				<textElement textAlignment="Right"/>
+				<text><![CDATA[Section : ]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="455" y="24" width="100" height="14"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{sectionName}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="413" y="38" width="40" height="14"/>
+				<textElement textAlignment="Right"/>
+				<text><![CDATA[Month : ]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="455" y="38" width="100" height="14"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$P{MONTH_NAME}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="455" y="52" width="100" height="14"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{feeStatus}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="413" y="52" width="40" height="14"/>
+				<textElement textAlignment="Right"/>
+				<text><![CDATA[Status : ]]></text>
+			</staticText>
+		</band>
+	</title>
+	<columnHeader>
+		<band height="21" splitType="Stretch">
+			<rectangle>
+				<reportElement x="0" y="2" width="555" height="19" backcolor="#CCCCFF"/>
+			</rectangle>
+			<staticText>
+				<reportElement x="4" y="5" width="46" height="13"/>
+				<textElement>
+					<font size="9" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Roll No.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="53" y="5" width="100" height="13"/>
+				<textElement>
+					<font size="9" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Admission No.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="156" y="5" width="100" height="13"/>
+				<textElement>
+					<font size="9" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Student Name]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="259" y="5" width="100" height="13"/>
+				<textElement>
+					<font size="9" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Father Name]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="361" y="5" width="100" height="13"/>
+				<textElement>
+					<font size="9" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Mother Name]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="35" splitType="Stretch">
+			<rectangle>
+				<reportElement x="0" y="0" width="555" height="11" backcolor="#FFE0FF"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</rectangle>
+			<textField>
+				<reportElement x="156" y="0" width="100" height="11"/>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{fullName}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="259" y="0" width="100" height="11"/>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{fatherName}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="361" y="0" width="100" height="11"/>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{motherName}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="3" y="0" width="37" height="11"/>
+				<textElement textAlignment="Center">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{rollNo}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="53" y="0" width="100" height="11"/>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{admissionNo}]]></textFieldExpression>
+			</textField>
+			<rectangle>
+				<reportElement x="96" y="11" width="459" height="12" backcolor="#CCCCFF"/>
+			</rectangle>
+			<staticText>
+				<reportElement x="102" y="11" width="62" height="12"/>
+				<textElement>
+					<font size="9" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Date]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="205" y="11" width="100" height="12"/>
+				<textElement>
+					<font size="9" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Description]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="479" y="11" width="69" height="12"/>
+				<textElement>
+					<font size="9" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Amount Due]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="320" y="11" width="63" height="12"/>
+				<textElement>
+					<font size="9" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Total Amount]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="404" y="11" width="65" height="12"/>
+				<textElement>
+					<font size="9" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Amount Paid]]></text>
+			</staticText>
+			<subreport>
+				<reportElement x="96" y="23" width="459" height="12"/>
+				<dataSourceExpression><![CDATA[new net.sf.jasperreports.engine.data.JRBeanCollectionDataSource($F{subReportDataList})]]></dataSourceExpression>
+				<subreportExpression><![CDATA[$P{SUBREPORT_DIR} + "ClassFeeDetailsSubReport.jasper"]]></subreportExpression>
+			</subreport>
+		</band>
+	</detail>
+	<pageFooter>
+		<band height="12" splitType="Stretch">
+			<textField pattern="dd/MM/yyyy h.mm a">
+				<reportElement x="480" y="1" width="100" height="11"/>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageFooter>
+</jasperReport>

@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE tiles-definitions PUBLIC
+"-//Apache Software Foundation//DTD Tiles Configuration 3.0//EN"
+"http://tiles.apache.org/dtds/tiles-config_3_0.dtd">
+
+<tiles-definitions>
+
+<!-- 	############################### Student Details ########################## -->
+	<!-- <definition name="subadmin/searchStudentDetails" extends="DefaultTemplate">
+		<put-attribute name="title" value="Search Student Details"></put-attribute>
+	    <put-attribute name="body" value="/WEB-INF/subadmin/searchStudentDetails.jsp" />
+	</definition>	
+	<definition name="subadmin/resultStudentDetails" extends="DefaultTemplate">
+		<put-attribute name="title" value="Students Details"></put-attribute>
+	    <put-attribute name="body" value="/WEB-INF/subadmin/resultStudentDetails.jsp" />
+	</definition> -->
+	<definition name="subadmin/addStudentDetails" extends="DefaultTemplate">
+		<put-attribute name="title" value="Add Student Details"></put-attribute>
+	    <put-attribute name="body" value="/WEB-INF/subadmin/addStudentDetails.jsp" />
+	</definition>
+	<definition name="subadmin/editStudentDetails" extends="DefaultTemplate">
+		<put-attribute name="title" value="Edit Student Details"></put-attribute>
+	    <put-attribute name="body" value="/WEB-INF/subadmin/editStudentDetails.jsp" />
+	</definition>
+<!-- 	########################################### Student Fee ########################################## -->
+	<!-- <definition name="subadmin/searchStudentFeeDetails" extends="DefaultTemplate">
+		<put-attribute name="title" value="Search Student Fee Details" />
+	    <put-attribute name="body" value="/WEB-INF/subadmin/searchStudentFeeDetails.jsp" />
+	</definition>
+	<definition name="subadmin/resultStudentFeeDetails" extends="DefaultTemplate">
+		<put-attribute name="title" value="Result Student Fee Details" />
+	    <put-attribute name="body" value="/WEB-INF/subadmin/resultStudentFeeDetails.jsp" />
+	</definition> -->
+	<definition name="subadmin/addStudentFeeDetails" extends="DefaultTemplate">
+		<put-attribute name="title" value="Add Student Fee Details" />
+	    <put-attribute name="body" value="/WEB-INF/subadmin/addStudentFeeDetails.jsp" />
+	</definition>
+	<!-- <definition name="subadmin/editStudentFeeDetails" extends="DefaultTemplate">
+		<put-attribute name="title" value="Edit Student Fee Details" />
+	    <put-attribute name="body" value="/WEB-INF/subadmin/editStudentFeeDetails.jsp" />
+	</definition>
+	<definition name="subadmin/resultClassFeeDetails" extends="DefaultTemplate">
+		<put-attribute name="title" value="Result Class Fee Details" />
+	    <put-attribute name="body" value="/WEB-INF/subadmin/resultClassFeeDetails.jsp" />
+	</definition> -->
+	
+	<!-- <definition name="subadmin/getStudentFeeTransactionHistoryModal" extends="DefaultTemplate">
+		<put-attribute name="title" value=""/>
+		<put-attribute name="header" value=""/>
+		<put-attribute name="menu" value=""/>
+	    <put-attribute name="body" value="/WEB-INF/subadmin/getStudentFeeTransactionHistoryModal.jsp" />
+		<put-attribute name="footer" value=""/>
+		<put-attribute name="rightMenu" value=""/>
+		<put-attribute name="scriptjs" value=""/>
+	</definition> -->
+	
+	
+<!-- 	############################### Transport ########################## -->
+	<!-- <definition name="subadmin/searchTransport" extends="DefaultTemplate">
+		<put-attribute name="title" value="Search Transport"></put-attribute>
+	    <put-attribute name="body" value="/WEB-INF/subadmin/searchTransport.jsp" />
+	</definition>	
+	<definition name="subadmin/resultTransport" extends="DefaultTemplate">
+		<put-attribute name="title" value="Result Transport"></put-attribute>
+	    <put-attribute name="body" value="/WEB-INF/subadmin/resultTransport.jsp" />
+	</definition> -->
+	<definition name="subadmin/addTransport" extends="DefaultTemplate">
+		<put-attribute name="title" value="Add Transport"></put-attribute>
+	    <put-attribute name="body" value="/WEB-INF/subadmin/addTransport.jsp" />
+	</definition>
+	<definition name="subadmin/editTransport" extends="DefaultTemplate">
+		<put-attribute name="title" value="Edit Transport"></put-attribute>
+	    <put-attribute name="body" value="/WEB-INF/subadmin/editTransport.jsp" />	
+	</definition>
+	
+</tiles-definitions>

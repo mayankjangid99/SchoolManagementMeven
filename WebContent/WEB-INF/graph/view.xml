@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE tiles-definitions PUBLIC
+"-//Apache Software Foundation//DTD Tiles Configuration 3.0//EN"
+"http://tiles.apache.org/dtds/tiles-config_3_0.dtd">
+
+<tiles-definitions>
+<!-- 	########################################### Exception Handler ########################################## -->
+	<definition name="graph/index" extends="DefaultTemplate">
+		<put-attribute name="header" value="" />
+		<put-attribute name="menu" value="" />
+		<put-attribute name="title" value="Graph" />
+	    <put-attribute name="body" value="/WEB-INF/graph/index.jsp" />
+	    <put-attribute name="footer" value="" />
+		<put-attribute name="rightMenu" value="" />
+	</definition>
+	
+	<definition name="graph/graph" extends="DefaultTemplate">
+		<put-attribute name="header" value="" />
+		<put-attribute name="menu" value="" />
+		<put-attribute name="title" value="Graph" />
+	    <put-attribute name="body" value="/WEB-INF/graph/graph.jsp" />
+	    <put-attribute name="footer" value="" />
+		<put-attribute name="rightMenu" value="" />
+	</definition>
+	
+	<definition name="graph/success" extends="DefaultTemplate">
+		<put-attribute name="header" value="" />
+		<put-attribute name="menu" value="" />
+		<put-attribute name="title" value="Graph" />
+	    <put-attribute name="body" value="/WEB-INF/graph/success.jsp" />
+	    <put-attribute name="footer" value="" />
+		<put-attribute name="rightMenu" value="" />
+	</definition>
+	
+
+</tiles-definitions>

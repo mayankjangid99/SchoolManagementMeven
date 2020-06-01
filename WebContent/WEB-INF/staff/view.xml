@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE tiles-definitions PUBLIC
+"-//Apache Software Foundation//DTD Tiles Configuration 3.0//EN"
+"http://tiles.apache.org/dtds/tiles-config_3_0.dtd">
+
+<tiles-definitions>
+
+<!-- 	############################### Student Details ########################## -->
+	<definition name="staff/searchStudentDetails" extends="DefaultTemplate">
+		<put-attribute name="title" value="Search Student Details"></put-attribute>
+	    <put-attribute name="body" value="/WEB-INF/staff/searchStudentDetails.jsp" />
+	</definition>
+	<definition name="staff/resultStudentDetails" extends="DefaultTemplate">
+		<put-attribute name="title" value="Students Details"></put-attribute>
+	    <put-attribute name="body" value="/WEB-INF/staff/resultStudentDetails.jsp" />
+	</definition>
+	<definition name="staff/resultPromoteStudentDetails" extends="DefaultTemplate">
+		<put-attribute name="title" value="Promote Students Details"></put-attribute>
+	    <put-attribute name="body" value="/WEB-INF/staff/resultPromoteStudentDetails.jsp" />
+	</definition>
+
+<!-- 	########################################### Student Attendance ########################################## -->
+	<definition name="staff/searchUserAttendanceDetails" extends="DefaultTemplate">
+		<put-attribute name="title" value="Search User Attendence Details"></put-attribute>
+	    <put-attribute name="body" value="/WEB-INF/staff/searchUserAttendanceDetails.jsp" />
+	</definition>
+	<definition name="staff/resultUserAttendanceDetails" extends="DefaultTemplate">
+		<put-attribute name="title" value="Result User Attendence Details"></put-attribute>
+	    <put-attribute name="body" value="/WEB-INF/staff/resultUserAttendanceDetails.jsp" />
+	</definition>
+	
+<!-- 	########################################### Student Fee ########################################## -->
+	<definition name="staff/searchStudentFeeDetails" extends="DefaultTemplate">
+		<put-attribute name="title" value="Search Student Fee Details" />
+	    <put-attribute name="body" value="/WEB-INF/staff/searchStudentFeeDetails.jsp" />
+	</definition>
+	<!-- <definition name="staff/resultStudentFeeDetails" extends="DefaultTemplate">
+		<put-attribute name="title" value="Result Student Fee Details" />
+	    <put-attribute name="body" value="/WEB-INF/staff/resultStudentFeeDetails.jsp" />
+	</definition> -->
+	<definition name="staff/resultClassFeeDetails" extends="DefaultTemplate">
+		<put-attribute name="title" value="Result Class Fee Details" />
+	    <put-attribute name="body" value="/WEB-INF/staff/resultClassFeeDetails.jsp" />
+	</definition>
+	<!-- <definition name="staff/getStudentFeeTransactionHistoryModal" extends="DefaultTemplate">
+		<put-attribute name="title" value=""/>
+		<put-attribute name="header" value=""/>
+		<put-attribute name="menu" value=""/>
+	    <put-attribute name="body" value="/WEB-INF/staff/getStudentFeeTransactionHistoryModal.jsp" />
+		<put-attribute name="footer" value=""/>
+		<put-attribute name="rightMenu" value=""/>
+		<put-attribute name="scriptjs" value=""/>
+	</definition> -->
+	
+	
+	
+	<definition name="staff/sendEmailModal" extends="DefaultTemplate">
+		<put-attribute name="title" value="" />
+		<put-attribute name="header" value="" />
+		<put-attribute name="menu" value="" />
+	    <put-attribute name="body" value="/WEB-INF/staff/sendEmailModal.jsp" />
+		<put-attribute name="footer" value="" />
+		<put-attribute name="rightMenu" value="" />
+		<put-attribute name="scriptjs" value="" />
+	</definition>
+	
+	
+<!-- 	########################################### Notes ########################################## -->
+	<definition name="staff/searchNotes" extends="DefaultTemplate">
+		<put-attribute name="title" value="Search Notes Details"></put-attribute>
+	    <put-attribute name="body" value="/WEB-INF/staff/searchNotes.jsp" />
+	</definition>
+	<definition name="staff/resultNotes" extends="DefaultTemplate">
+		<put-attribute name="title" value="Result Notes Details"></put-attribute>
+	    <put-attribute name="body" value="/WEB-INF/staff/resultNotes.jsp" />
+	</definition>
+	<definition name="staff/addNotes" extends="DefaultTemplate">
+		<put-attribute name="title" value="Add Notes"></put-attribute>
+	    <put-attribute name="body" value="/WEB-INF/staff/addNotes.jsp" />
+	</definition>
+	<definition name="staff/editNotes" extends="DefaultTemplate">
+		<put-attribute name="title" value="Edit Notes"></put-attribute>
+	    <put-attribute name="body" value="/WEB-INF/staff/editNotes.jsp" />
+	</definition>
+	
+	<!-- 	########################################### StudentReportCard ########################################## -->
+	<definition name="staff/searchStudentReportCard" extends="DefaultTemplate">
+		<put-attribute name="title" value="Search Student Report Card Details"></put-attribute>
+	    <put-attribute name="body" value="/WEB-INF/staff/searchStudentReportCard.jsp" />
+	</definition>
+	<definition name="staff/resultStudentReportCard" extends="DefaultTemplate">
+		<put-attribute name="title" value="Result Student Report Card Details"></put-attribute>
+	    <put-attribute name="body" value="/WEB-INF/staff/resultStudentReportCard.jsp" />
+	</definition>
+	<definition name="staff/addStudentReportCard" extends="DefaultTemplate">
+		<put-attribute name="title" value="Add Student Report Card"></put-attribute>
+	    <put-attribute name="body" value="/WEB-INF/staff/addStudentReportCard.jsp" />
+	</definition>
+	<definition name="staff/editStudentReportCard" extends="DefaultTemplate">
+		<put-attribute name="title" value="Edit Student Report Card"></put-attribute>
+	    <put-attribute name="body" value="/WEB-INF/staff/editStudentReportCard.jsp" />
+	</definition>
+	
+</tiles-definitions>

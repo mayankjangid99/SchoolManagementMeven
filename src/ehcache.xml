@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- Please note that in ehcache.xml, if eternal=”true” then we should not write timeToIdealSeconds, timeToLiveSeconds, hibernate will take care about those values
+So if you want to give values manually better use eternal=”false” always, so that we can assign values into timeToIdealSeconds, timeToLiveSeconds manually.
+
+timeToIdealSeconds=”seconds” means, if the object in the global cache is ideal, means not using by any other class or object then it will be waited for some time we specified and deleted from the global cache if time is exceeds more than timeToIdealSeconds value.
+(if entity not use to given time then entity clear from cache)
+
+timeToLiveSeconds=”seconds” means, the other Session or class using this object or not, i mean may be it is using by other sessions or may not, what ever the situation might be, once it competed the time specified timeToLiveSeconds, then it will be removed from the global cache by hibernate.
+(if entity use or not use to given time then entity clear from cache)
+ -->
+
+
+<ehcache xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:noNamespaceSchemaLocation="ehcache.xsd" updateCheck="true"
+    monitoring="autodetect" dynamicConfig="true">
+ 
+    <diskStore path="java.io.tmpdir/ehcache" />
+ 
+    <defaultCache maxEntriesLocalHeap="10000" eternal="false"
+        timeToIdleSeconds="86400" timeToLiveSeconds="86400" diskSpoolBufferSizeMB="30"
+        maxEntriesLocalDisk="10000000" diskExpiryThreadIntervalSeconds="86400"
+        memoryStoreEvictionPolicy="LRU" statistics="true">
+        <persistence strategy="localTempSwap" />
+    </defaultCache>
+ 
+    <cache name="org.hibernate.cache.internal.StandardQueryCache"
+        maxEntriesLocalHeap="5" eternal="false" timeToLiveSeconds="86400">
+        <persistence strategy="localTempSwap" />
+    </cache>
+ 
+    <cache name="org.hibernate.cache.spi.UpdateTimestampsCache"
+        maxEntriesLocalHeap="5000" eternal="true">
+        <persistence strategy="localTempSwap" />
+    </cache>
+    
+   <cache
+    name="classInfo"
+    maxElementsInMemory="10000"
+    maxElementsOnDisk="10000"
+    eternal="false"
+    timeToIdleSeconds="300"
+    timeToLiveSeconds="600"
+    overflowToDisk="true"
+	/>
+	
+	<cache
+    name="classSection"
+    maxElementsInMemory="10000"
+    maxElementsOnDisk="10000"
+    eternal="false"
+    timeToIdleSeconds="300"
+    timeToLiveSeconds="600"
+    overflowToDisk="true"
+	/>
+	
+	<cache
+    name="schoolProfile"
+    maxElementsInMemory="10000"
+    maxElementsOnDisk="10000"
+    eternal="false"
+    timeToIdleSeconds="300"
+    timeToLiveSeconds="600"
+    overflowToDisk="true"
+	/>
+	
+	<!--  <cache
+    name="footer"
+    maxElementsInMemory="10000"
+    eternal="false"
+    timeToIdleSeconds="120"
+    timeToLiveSeconds="300"
+    overflowToDisk="true"
+	/>
+	<cache
+    name="notice"
+    maxElementsInMemory="10000"
+    eternal="false"
+    timeToIdleSeconds="120"
+    timeToLiveSeconds="300"
+    overflowToDisk="true"
+	/>
+	<cache
+    name="slider"
+    maxElementsInMemory="10000"
+    eternal="false"
+    timeToIdleSeconds="120"
+    timeToLiveSeconds="300"
+    overflowToDisk="true"
+	/>
+	<cache
+    name="services"
+    maxElementsInMemory="10000"
+    eternal="false"
+    timeToIdleSeconds="120"
+    timeToLiveSeconds="300"
+    overflowToDisk="true"
+	/>
+	<cache
+    name="products"
+    maxElementsInMemory="10000"
+    eternal="false"
+    timeToIdleSeconds="120"
+    timeToLiveSeconds="300"
+    overflowToDisk="true"
+	/> -->
+	
+</ehcache>
